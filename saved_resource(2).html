@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://jsfiddle.net/gbh1m8Ln/1/embedded/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script type="text/javascript">
+        var height
+        var force_height = null
+        var slug = "gbh1m8Ln"
+        var show_src = "//fiddle.jshell.net/gbh1m8Ln/1/show/light/"
+        var resize_element_counter = 0
+        var shell_edit_url = "/gbh1m8Ln/1/light/"
+
+      </script>
+
+      <script src="./highlight.pack.js.download"></script>
+      <script src="./embed.js.download"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+    <style type="text/css" media="screen">
+    /* */</style>
+
+  </head>
+  <body>
+    <div id="full-embed">
+        <header>
+          <h1>
+            <a href="https://jsfiddle.net/gbh1m8Ln/1/" target="_blank">
+              <svg width="34" height="40">
+      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
+    </svg>Edit in JSFiddle
+            </a>
+          </h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="active">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/gbh1m8Ln/1/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="html" href="https://jsfiddle.net/gbh1m8Ln/1/embedded/#HTML">HTML</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="css" href="https://jsfiddle.net/gbh1m8Ln/1/embedded/#CSS">CSS</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="result" href="https://jsfiddle.net/gbh1m8Ln/1/embedded/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 85.3594px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont JavaScript active hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRecommendations</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> searchInput = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'search'</span>).value;
+    <span class="hljs-keyword">const</span> resultsDiv = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'results'</span>);
+
+    <span class="hljs-comment">// Sample data for recommendations (you can expand this)</span>
+    <span class="hljs-keyword">const</span> recommendations = {
+        <span class="hljs-attr">beaches</span>: [<span class="hljs-string">"Malibu Beach, California"</span>, <span class="hljs-string">"Bondi Beach, Australia"</span>],
+        <span class="hljs-attr">temples</span>: [<span class="hljs-string">"Golden Temple, India"</span>, <span class="hljs-string">"Temple of Heaven, China"</span>],
+        <span class="hljs-attr">toronto</span>: [<span class="hljs-string">"CN Tower"</span>, <span class="hljs-string">"Royal Ontario Museum"</span>]
+    };
+
+    <span class="hljs-keyword">const</span> matchedRecommendations = recommendations[searchInput.toLowerCase()] || [];
+
+    resultsDiv.innerHTML = matchedRecommendations.length 
+        ? <span class="hljs-string">`&lt;h3&gt;Recommendations:&lt;/h3&gt;&lt;ul&gt;<span class="hljs-subst">${matchedRecommendations.map(item =&gt; <span class="hljs-string">`&lt;li&gt;<span class="hljs-subst">${item}</span>&lt;/li&gt;`</span>).join(<span class="hljs-string">''</span>)}</span>&lt;/ul&gt;`</span>
+        : <span class="hljs-string">"&lt;p&gt;No recommendations found.&lt;/p&gt;"</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendMessage</span>(<span class="hljs-params">event</span>) </span>{
+    event.preventDefault();
+    alert(<span class="hljs-string">"Message sent!"</span>);
+    <span class="hljs-comment">// Implement additional functionality to handle message sending</span>
+}
+</pre>
+              <pre class="tCont HTML hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Travel Recommendation Website<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#about"</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to Travel Recommendations<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"home"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your preferences (e.g., beaches, temples)"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"getRecommendations()"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"results"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"about"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>About Us<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Mission, values, and goals...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Add team profiles and company history here --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contact"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contactForm"</span> <span class="hljs-attr">onsubmit</span>=<span class="hljs-string">"sendMessage(event)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Your Name"</span> <span class="hljs-attr">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Your Email"</span> <span class="hljs-attr">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Your Message"</span> <span class="hljs-attr">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-symbol">&amp;copy;</span> 2024 Travel Recommendations<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"script.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</pre>
+              <pre class="tCont CSS hljs"><span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-family</span>: Arial, sans-serif;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">header</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#4CAF50</span>;
+    <span class="hljs-attribute">color</span>: white;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style-type</span>: none;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">display</span>: inline;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">15px</span>;
+}
+
+<span class="hljs-selector-tag">section</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+}
+
+<span class="hljs-selector-tag">footer</span> {
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f1f1f1</span>;
+}
+</pre>
+              <div class="tCont result " id="result">
+              </div>
+        </div>
+    </div>
+    
+<!-- Google tag (gtag.js) -->
+<script async="" src="./js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function analytics_jsf(){dataLayer.push(arguments);}
+  analytics_jsf("js", new Date());
+  analytics_jsf("config", "G-DG76L8EKG3", {
+    page_path:     "/[fiddle]/[revision]/[embedded]/",
+    cookie_prefix: "jsfiddle",
+    
+  })
+</script>
+
+  
+
+</body></html>
